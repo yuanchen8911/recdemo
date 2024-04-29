@@ -7,7 +7,7 @@
       pip3 install asciinema
       ```
 3. Install npm (https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
-4. Install svg-term-cli: (see more 
+4. Install svg-term-cli: (https://github.com/marionebl/svg-term-cli)
       ```sh
       npm install -g svg-term-cli
       ```
@@ -22,17 +22,17 @@
   # First 
 ```
 ## Play a demo
-   `play-demo.sh <demo file> <command prompt>` 
+   `play-demo.sh <demo file> <command prompt> (optional)` 
    
  ```sh
    play-demo.sh mydemo $demo
 ```
-Look at `play-demo.sh` and cusromize the prompt, font, colar, delay, etc. as needed.
+Check out `play-demo.sh` to customize the prompt, font, colar, delay, etc. as needed.
 
-## Play a demo and save it  to a svg file
+## Play a demo and save it to a svg file
    `svg-term --command "play-demo.sh <demo file>" --output <output file> --window`
    ``` sh
-     svg-term -coomand "play-demo.sh mydemo --output mydemo.svg --window
+     svg-term -coomand "play-demo.sh mydemo" --output mydemo.svg --window
    ```
 ## Save a demo in a mp4 file
 
