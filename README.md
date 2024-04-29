@@ -27,7 +27,7 @@
  ```sh
    play-demo.sh mydemo $demo
 ```
-Check out `play-demo.sh` to customize the prompt, font, colar, delay, etc. as needed.
+Check out [play-demo.sh](file://play-demo.sh) to customize the prompt, font, colar, delay, etc. as needed.
 
 ## Play a demo and save it to a svg file
    `svg-term --command "play-demo.sh <demo file>" --output <output file> --window`
