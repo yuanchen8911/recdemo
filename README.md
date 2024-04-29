@@ -18,7 +18,7 @@ This repo shows how to use `asciinema` and `svg-term` to record demos in your te
     - Comment and note lines starts with #
     - Command line that contains a valid command that can be executed.
   
-  Here's an example demo file: [minikube-demo](minikube-demo).
+  Here's an example demo file: [minikube-demo](examples/minikube-demo).
 
 ### Play a demo
    `./scripts/play-demo.sh <demo file> <command prompt> (optional)` 
@@ -26,7 +26,7 @@ This repo shows how to use `asciinema` and `svg-term` to record demos in your te
  ```sh
    ./scripts/play-demo.sh examples/minikube-demo $demo
 ```
-Check out [play-demo.sh](play-demo.sh) to customize the prompt, font, colar, delay, etc. as needed.
+Check out [play-demo.sh](scripts/play-demo.sh) to customize the prompt, font, colar, delay, etc. as needed.
 
 ### Play a demo and save it to a svg file
    `svg-term --command "play-demo.sh <demo file>" --output <output file> --window`
