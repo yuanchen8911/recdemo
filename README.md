@@ -18,24 +18,24 @@ This repo shows how to use `asciinema` and `svg-term` to record demos in your te
     - Comment and note lines starts with #
     - Command line that contains a valid command that can be executed.
   
-  Here's an example demo file: [example-demo](example.demo).
+  Here's an example demo file: [minikube-demo](minikube-demo).
 
 ### Play a demo
-   `play-demo.sh <demo file> <command prompt> (optional)` 
+   `./scripts/play-demo.sh <demo file> <command prompt> (optional)` 
    
  ```sh
-   play-demo.sh example-demo $demo
+   ./scripts/play-demo.sh examples/minikube-demo $demo
 ```
 Check out [play-demo.sh](play-demo.sh) to customize the prompt, font, colar, delay, etc. as needed.
 
 ### Play a demo and save it to a svg file
    `svg-term --command "play-demo.sh <demo file>" --output <output file> --window`
    ``` sh
-     svg-term -coomand "play-demo.sh example-demo" --output example-demo.svg --window
+     svg-term -coomand "./scripts/play-demo.sh examples/minikube-demo" --output minikube-demo.svg --window
    ```
 
 ### Play the genereated svg
-Open the output file `example-demo.svg`.
+Open the output file `minikube-demo.svg`.
 
 ### Save a demo in a mp4 file 
 TODO
