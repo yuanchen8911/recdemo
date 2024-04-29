@@ -1,5 +1,6 @@
+## Introduction
 
-`recdemo` demonstrates how to use `asciinema` and `svg-term` to create and record demos in your terminal sessions. 
+This repo shows how to use `asciinema` and `svg-term` to record demos in your terminal sessions and save to svg or mp4 files. 
 
 ## Install
 1. Install `asciinema` (https://asciinema.org/docs/installation)
