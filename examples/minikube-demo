@@ -1,24 +1,25 @@
-# This demo shows how to install minikube and play kubernetes on your Mac.
+# This demo shows how to use minikube and play kubernetes on your Mac.
 
 # install kubectl
-brew install kubectl
-
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/darwin/amd64/kubectl"
+   
 # install minikube
-brew install minikube
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64
+install minikube-darwin-amd64 /usr/local/bin/minikube
 
 # start minikube
 minikube start
 
 # show the cluster information
-kubect cluster-info
+kubectl cluster-info
 kubectl get nodes
 
 # create a pod
-kubectl run test-pod --image=nginx --wait
-kubectl get pods  
+kubectl run test-pod --image=nginx
 
-# ssh to the pod container
-kubectl exec test-pod -i -- /bin/sh
+# wait for the pod is running
+sleep 5
+kubectl get pods
 
 # delete the pod
 kubectl delete pod test-pod
@@ -27,5 +28,4 @@ kubectl delete pod test-pod
 minikube stop
 minikube delete
 
-# That's it. 
 # Thank you!

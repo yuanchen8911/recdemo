@@ -24,14 +24,14 @@ This project shows how to use `asciinema` and `svg-term` to record demos in your
    `./scripts/play-demo.sh <demo file> <command prompt> (optional)` 
    
  ```sh
-   ./scripts/play-demo.sh examples/minikube-demo $demo
+   ./scripts/play-demo.sh examples/minikube-demo k8s 
 ```
 Check out [play-demo.sh](scripts/play-demo.sh) to customize the prompt, font, colar, delay, etc. as needed.
 
 ### Play a demo and save it to a svg file
-   `svg-term --command "play-demo.sh <demo file>" --output <output file> --window`
+   `svg-term --command "play-demo.sh <demo file>" --out <output file> --window`
    ``` sh
-     svg-term -coomand "./scripts/play-demo.sh examples/minikube-demo" --output minikube-demo.svg --window
+     svg-term --command "./scripts/play-demo.sh examples/minikube-demo k8s" --out examples/minikube-demo.svg --window
    ```
 
 ### Play a genereated svg file

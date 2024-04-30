@@ -59,7 +59,7 @@ function play_file() {
       ps1 0.5
       type_message "${line}"
     elif [[ "${line}" == "" ]]; then
-      ps1 2
+      ps1 1
       br
     else
       ps1 1
@@ -77,5 +77,5 @@ else
  PLAY_PWD="${PLAY_PWD:-"$2"}"
 fi
 
-PLAY_PS1="$(color 96 "${PLAY_PWD}")$(color 94 "$") "
+PLAY_PS1="$(color 96 "${PLAY_PWD}")$(color 94 ">") "
 play_file "$1"
