@@ -33,9 +33,12 @@ Check out [play-demo.sh](scripts/play-demo.sh) to customize the prompt, font, co
    ``` sh
      svg-term --command "./scripts/play-demo.sh examples/minikube-demo k8s" --out examples/minikube-demo.svg --window
    ```
+### Play a svg file
+Open the generated svg file [demo](examples/minikube-demo.svg).
 
-### Play a genereated svg file
-Open the svg file `minikube-demo.svg`.
+<p align="center">
+  <img width="600" src="examples/minikube-demo.svg">
+</p>
 
 ### Save a demo in a mp4 file 
 TODO
