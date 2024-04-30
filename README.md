@@ -44,7 +44,7 @@ Open the generated svg file [demo](examples/minikube-demo.svg).
 ### Save a demo in a mp4 file 
 TODO
 
-### Ackowledgement
+### Acknowledgement
 
 The script `play-demo.sh` was originally created by the `kwok` project: https://kwok.sigs.k8s.io/.
 
