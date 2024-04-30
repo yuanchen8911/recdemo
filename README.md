@@ -21,7 +21,7 @@ This project shows how to use `asciinema` and `svg-term` to record demos in your
 ### Create a demo file
 A demo file is a valid script file consisting of 
 - Comment and note lines starting with #
-- Command lines with a valid command to be executed.
+- Command lines with valid commands that will run in the demo.
   
 Here's an example demo file: [minikube-demo](examples/minikube-demo).
 
