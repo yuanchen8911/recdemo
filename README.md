@@ -2,6 +2,11 @@
 
 This project shows how to use `asciinema` and `svg-term` to record demos in your terminal sessions and save them to svg or mp4 files. 
 
+<p align="center">
+  <img width="800" src="examples/minikube-demo.svg">
+</p>
+
+
 ## Install
 1. Install `asciinema` (https://asciinema.org/docs/installation)
       ```sh
@@ -35,10 +40,6 @@ Check out [play-demo.sh](scripts/play-demo.sh) to customize the prompt, font, co
    ```
 ### Play a svg file
 Open the generated svg file [demo](examples/minikube-demo.svg).
-
-<p align="center">
-  <img width="800" src="examples/minikube-demo.svg">
-</p>
 
 ### Save a demo in a mp4 file 
 TODO
