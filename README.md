@@ -14,11 +14,11 @@ This project shows how to use `asciinema` and `svg-term` to record demos in your
       ```
 ## Usage
 ### Create a demo file
-  A demo file is any valid executable script consisting of 
+A demo file is any valid executable script consisting of 
     - Comment and note lines starts with #
-    - Command line that contains a valid command that can be executed.
+    - Command lines that contain a valid command that can be executed.
   
-  Here's an example demo file: [minikube-demo](examples/minikube-demo).
+Here's an example demo file: [minikube-demo](examples/minikube-demo).
 
 ### Play a demo
    `./scripts/play-demo.sh <demo file> <command prompt> (optional)` 
