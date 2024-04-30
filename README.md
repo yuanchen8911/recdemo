@@ -37,11 +37,15 @@ Check out [play-demo.sh](scripts/play-demo.sh) to customize the prompt, font, co
 Open the generated svg file [demo](examples/minikube-demo.svg).
 
 <p align="center">
-  <img width="600" src="examples/minikube-demo.svg">
+  <img width="800" src="examples/minikube-demo.svg">
 </p>
 
 ### Save a demo in a mp4 file 
 TODO
 
 Have fun!
+
+### Ackowledgement
+
+The script `play-demo.sh` was originally created by the `kwok` project: https://kwok.sigs.k8s.io/.
 
