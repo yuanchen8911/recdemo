@@ -46,5 +46,5 @@ TODO
 
 ### Acknowledgement
 
-The script `play-demo.sh` was originally created by the `kwok` project: https://kwok.sigs.k8s.io/.
+The script `play-demo.sh` was originally created by @shimingz for the `kwok` project: https://kwok.sigs.k8s.io/.
 
