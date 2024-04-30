@@ -31,7 +31,7 @@ Here's an example demo file: [minikube-demo](examples/minikube-demo).
  ```sh
    ./scripts/play-demo.sh examples/minikube-demo k8s 
 ```
-Check out [play-demo.sh](scripts/play-demo.sh) to customize the prompt, font, colar, delay, etc. as needed.
+Check out [play-demo.sh](scripts/play-demo.sh) to customize the font, color, delay, etc. as needed.
 
 ### Play a demo and save it to a svg file
    `svg-term --command "play-demo.sh <demo file>" --out <output file> --window`
@@ -46,5 +46,5 @@ TODO
 
 ### Acknowledgement
 
-The script `play-demo.sh` was originally created by @shimingz for the `kwok` project: https://kwok.sigs.k8s.io/.
+The script `play-demo.sh` was originally created by @wzshiming for the `kwok` project: https://kwok.sigs.k8s.io/.
 
