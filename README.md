@@ -28,9 +28,9 @@ Here's a simple example demo file: [simple.demo](examples/simple.demo).
 # This is a simple demo file
 
 # Comment/note lines begin with '#'
-# This is a comment line
+# This is a comment.
 
-# A command line is a valid command
+# A command line is a valid command that will execute.
 # List all files in the current directory
 ls
 
