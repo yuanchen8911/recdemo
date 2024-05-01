@@ -4,7 +4,7 @@
 # This is a comment line
 
 # A command line is a valid command 
-# List all file in the current directory
+# List all files in the current directory
 ls
 
 # Show today's date
@@ -12,6 +12,9 @@ date
 
 # Say hello
 echo "Hello, world!"
+
+# Wait for 2 seconds
+sleep 2
 
 # That's it. 
 # Thank you for using recdemo!"
