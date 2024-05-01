@@ -25,26 +25,31 @@ A demo file is a valid script file consisting of
   
 Here's an example demo file: [minikube-demo](examples/minikube-demo).
 
-### Play a demo
-   `./scripts/play-demo.sh <demo file> <command prompt> (optional)` 
-   
- ```sh
-   ./scripts/play-demo.sh examples/minikube-demo k8s 
+### Play a demo and save it in a svg file
+ ```
+  scripts/recdemo.sh <input> [output] [--help] [options...]
+  <input> input file
+  <output> output file
+  --help show this help
+  --cols cols of the terminal
+  --rows rows of the terminal
+  --ps1 ps1 of the recording
+  --term terminal type
 ```
-Check out [play-demo.sh](scripts/play-demo.sh) to customize the font, color, delay, etc. as needed.
+ ```sh
+   ./scripts/recdemo.sh examples/minikube-demo examples/minikube-demo.svg
+```
 
-### Play a demo and save it to a svg file
-   `svg-term --command "play-demo.sh <demo file>" --out <output file> --window`
-   ``` sh
-     svg-term --command "./scripts/play-demo.sh examples/minikube-demo k8s" --out examples/minikube-demo.svg --window
-   ```
-### Play a svg file
-Open the generated svg file [demo](examples/minikube-demo.svg).
+### Play a genereated svg file
+Open the svg file `minikube-demo.svg`.
 
-### Save a demo in a mp4 file 
+### Record a demo in a mp4 file 
 TODO
 
 ## Acknowledgement
 
-The script `play-demo.sh` was originally created by @wzshiming for the `kwok` project: https://kwok.sigs.k8s.io/.
+The script was originally created by @wzshiming for the `kwok` project: https://kwok.sigs.k8s.io/.
 
+=======
+Have fun!
+>>>>>>> 829d934 (Update README.md)
