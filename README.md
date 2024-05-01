@@ -6,7 +6,7 @@ Playing and recording demos has never been easier. This project provides a tool 
       ```sh
       pip3 install asciinema
       ```
-3. Install`Node.js` and `npm` (https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+3. Install`Node.js/npm` (https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 4. Install `svg-term-cli` (https://github.com/marionebl/svg-term-cli)
       ```sh
       npm install -g svg-term-cli
