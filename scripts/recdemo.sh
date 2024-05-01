@@ -40,7 +40,7 @@ export PATH="${CACHE_DIR}/py_modules/bin:${CACHE_DIR}/node_modules/.bin:${PATH}:
 function usage() {
   echo "Usage: ${0} <input> [output] [--help] [options...]"
   echo "  <input> input file"
-  echo "  [output] output file: svg for a svg file (default), .cast for a cast file, .mp4 for a video file"
+  echo "  [output] output file: .svg for a svg file (default), .cast for a cast file, .mp4 for a video file"
   echo "  --help show this help"
   echo "  --cols=${COLS} cols of the terminal"
   echo "  --rows=${ROWS} rows of the terminal"
@@ -218,13 +218,11 @@ function convert() {
   inext=$(ext_file "${input}")
   case "${outext}" in
   cast)
-      echo "Play and save a demo in a cast file"
       install_asciinema
       demo2cast "${input}" "${output}"
       return 0
       ;;
   svg)
-      echo "Play and save a demo in a svg file (default)"
       install_asciinema
       install_svg_term_cli
 
@@ -234,7 +232,6 @@ function convert() {
       return 0
       ;;
   mp4)
-      echo "Play and save a demo in a mp4 video file"
       install_asciinema
       install_svg_term_cli
       install_svg_to_video

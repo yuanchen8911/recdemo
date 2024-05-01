@@ -1,9 +1,8 @@
 # This is a simple demo file
 
-# Comment/note lines begin with '#'
-# This is a comment line
+# Comments/notes, each starting with '#'.
 
-# A command line is a valid command 
+# A command line is a valid command that will execute.
 # List all files in the current directory
 ls
 
