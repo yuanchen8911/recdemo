@@ -62,7 +62,7 @@ clear
 ```
 
 ### Play a genereated svg file
-Just open the generated svg file `simple-demo.svg`..
+Open the svg file `simple-demo.svg` generated in the previous step.
 
 <p align="center">
   <img width="800" src="examples/simple-demo.svg">
