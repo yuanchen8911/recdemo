@@ -19,6 +19,30 @@ A demo file is a valid script file consisting of
   
 Here's a simple example demo: [simple.demo](examples/simple.demo). 
 
+```
+# This is a simple demo file
+
+# Comment/note lines begin with '#'
+# This is a comment line
+
+# A command line is a valid command
+# List all files in the current directory
+ls
+
+# Show today's date
+date
+
+# Say hello
+echo "Hello, world!"
+
+# Wait for 2 seconds
+sleep 2
+
+# That's it.
+# Thank you for using recdemo!"
+
+clear
+```
 
 ### Play a demo and save it in a svg file
  ```
