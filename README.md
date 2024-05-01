@@ -1,4 +1,4 @@
-# Play and Record Demos with ease
+# Play and record demos with ease
 Playing and recording demos in terminal sessions has never been easier. This repository offers a guide and a tool for playing a terminal demo and recording it as SVG files using `asciinema` and `svg-term`.
 
 ## Install dependencies manually 
