@@ -38,9 +38,9 @@ ARGS=()
 export PATH="${CACHE_DIR}/py_modules/bin:${CACHE_DIR}/node_modules/.bin:${PATH}:${PATH}"
 
 function usage() {
-  echo "Usage: ${0} <input> <output> [--help] [options...]"
+  echo "Usage: ${0} <input> [output] [--help] [options...]"
   echo "  <input> input file"
-  echo "  <output> output file"
+  echo "  [output] output file: svg for a svg file (default), .cast for a cast file, .mp4 for a video file"
   echo "  --help show this help"
   echo "  --cols=${COLS} cols of the terminal"
   echo "  --rows=${ROWS} rows of the terminal"
@@ -218,28 +218,13 @@ function convert() {
   inext=$(ext_file "${input}")
   case "${outext}" in
   cast)
-    case "${inext}" in
-    demo)
+      echo "Play and save a demo in a cast file"
       install_asciinema
-
       demo2cast "${input}" "${output}"
       return 0
       ;;
-    *)
-      echo "Unsupported input file type: ${inext}"
-      return 1
-      ;;
-    esac
-    ;;
   svg)
-    case "${inext}" in
-    cast)
-      install_svg_term_cli
-
-      cast2svg "${input}" "${output}"
-      return 0
-      ;;
-    demo)
+      echo "Play and save a demo in a svg file (default)"
       install_asciinema
       install_svg_term_cli
 
@@ -248,30 +233,8 @@ function convert() {
       cast2svg "${castfile}" "${output}"
       return 0
       ;;
-    *)
-      echo "Unsupported input file type: ${inext}"
-      return 1
-      ;;
-    esac
-    ;;
   mp4)
-    case "${inext}" in
-    svg)
-      install_svg_to_video
-
-      svg2video "${input}" "${output}"
-      return 0
-      ;;
-    cast)
-      install_svg_term_cli
-      install_svg_to_video
-
-      viedofile=$(ext_replace "${output}" "svg")
-      cast2svg "${input}" "${viedofile}"
-      svg2video "${viedofile}" "${output}"
-      return 0
-      ;;
-    demo)
+      echo "Play and save a demo in a mp4 video file"
       install_asciinema
       install_svg_term_cli
       install_svg_to_video
@@ -283,12 +246,6 @@ function convert() {
       svg2video "${viedofile}" "${output}"
       return 0
       ;;
-    *)
-      echo "Unsupported input file type: ${inext}"
-      return 1
-      ;;
-    esac
-    ;;
   *)
     echo "Unsupported output file type: ${outext}"
     return 1
