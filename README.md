@@ -1,5 +1,5 @@
 # Play and Record Demos in Terminal Sessions with Little Efforts
-Playing and recording demos has never been easier. This project provides a script and how you how to use it for playing demos in terminal sessions and saving them to SVG files using `asciinema` and `svg-term`.
+Playing and recording demos has never been easier. This project provides a script and show how to use it for playing demos in terminal sessions and saving them to SVG files using `asciinema` and `svg-term`.
 
 ## Install
 1. Install `asciinema` (https://asciinema.org/docs/installation)
