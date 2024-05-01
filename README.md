@@ -17,7 +17,7 @@ A demo file is a valid script file that consists of:
 - Comments and notes, each starting with `#`.
 - Command lines containing valid commands that will execute during the demo.
 
-Here's a simple example demo: [simple.demo](examples/simple.demo). 
+Here's a simple example demo file: [simple.demo](examples/simple.demo). 
 
 ```
 # This is a simple demo file
