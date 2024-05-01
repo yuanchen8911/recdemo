@@ -78,4 +78,4 @@ Here's a realstic demo that shows how to use minikube to play with kubernetes on
 
 ## Acknowledgement
 
-The script `recdemo.sh` was adapted from a script that was originally created by @wzshiming for the `kwok` project: https://kwok.sigs.k8s.io/.
+The tool `recdemo.sh` was adapted from a script that was originally created by @wzshiming for the `kwok` project: https://kwok.sigs.k8s.io/.
