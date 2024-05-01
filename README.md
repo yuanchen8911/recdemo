@@ -11,7 +11,7 @@ Playing and recording demos has never been easier. This project provides a tool 
       ```sh
       npm install -g svg-term-cli
       ```
-5. (optionall( Install `svg-to-video`
+5. (optional) Install `svg-to-video`
       ```sh
       npm install -g svg-to-video
       ```
