@@ -13,7 +13,7 @@ Playing and recording demos has never been easier. This project provides a tool 
       ```
 ## Usage
 ### Create a demo file
-A demo file is a valid script file that consists of:
+A demo file is a valid script that consists of:
 - Comments and notes, each starting with `#`.
 - Command lines containing valid commands that will execute during the demo.
 
