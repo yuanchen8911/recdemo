@@ -62,6 +62,10 @@ clear
 ### Play a genereated svg file
 Open the generated svg file `simple-demo.svg`.
 
+<p align="center">
+  <img width="800" src="examples/simple-demo.svg">
+</p>
+
 ## A realistc demo 
 
 Here's a realstic demo that shows how to use minikube to play with kubernetes on your Mac..
