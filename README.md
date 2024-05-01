@@ -50,7 +50,7 @@ clear
  ```
   scripts/recdemo.sh <input> [output] [--help] [options...]
   <input> input file
-  <output> output file: .svg for a svg file (default), .cast for a cast file, .mp4 for a video file
+  [output] output file: .svg for a svg file (default), .cast for a cast file
   --help show this help
   --cols cols of the terminal
   --rows rows of the terminal
