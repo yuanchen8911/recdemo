@@ -48,7 +48,3 @@ TODO
 ## Acknowledgement
 
 The script was originally created by @wzshiming for the `kwok` project: https://kwok.sigs.k8s.io/.
-
-=======
-Have fun!
->>>>>>> 829d934 (Update README.md)
