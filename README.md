@@ -79,6 +79,13 @@ Here's a realstic demo that shows how to use minikube to play with kubernetes on
   <img width="800" src="examples/minikube-demo.svg">
 </p>
 
+## TO DO
+Add the support to save a demo in a video file by converting svg to mp4. 
+
+## Contributions
+
+Contributions are welcome!
+
 ## Acknowledgement
 
 The tool `recdemo.sh` was adapted from a script that was originally created by @wzshiming for the `kwok` project: https://kwok.sigs.k8s.io/.
