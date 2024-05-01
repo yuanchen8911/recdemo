@@ -1,21 +1,17 @@
 # Play and Record Demos in Terminal Sessions with Little Efforts
 Playing and recording demos has never been easier. This project provides a small tool and demonstrates how to play demos in terminal sessions and save them as SVG files using `asciinema` and `svg-term`.
 
-## Install dependencies
+## Install dependencies manually (You can skip this step if you have `pip3` and `node.js/npm` installed on your machine. In this case, the script will isntall `asciinema` and `svg-term` for you automatically.)
+
 1. Install `asciinema` (https://asciinema.org/docs/installation)
       ```sh
       pip3 install asciinema
       ```
-3. Install`Node.js/npm` (https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
-4. Install `svg-term-cli` (https://github.com/marionebl/svg-term-cli)
+2. Install`Node.js/npm` (https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+3. Install `svg-term-cli` (https://github.com/marionebl/svg-term-cli)
       ```sh
       npm install -g svg-term-cli
       ```
-5. (optional) Install `svg-to-video`
-      ```sh
-      npm install -g svg-to-video
-      ```
-        
 ## Usage
 ### Create a demo file
 A demo file is a valid script that consists of:
@@ -37,7 +33,7 @@ ls
 # Show today's date
 date
 
-# Say hello
+# Say Hello
 echo "Hello, world!"
 
 # Wait for 2 seconds
@@ -65,13 +61,13 @@ clear
 ```
 
 ### Play a genereated svg file
-Open the generated svg file `simple-demo.svg`.
+Just open the generated svg file `simple-demo.svg`..
 
 <p align="center">
   <img width="800" src="examples/simple-demo.svg">
 </p>
 
-## A realistc demo 
+## A realistic demo 
 
 Here's a realstic demo that shows how to use minikube to play with kubernetes on your Mac.
 - Input: [minikube.demo](examples/minikube.demo)

@@ -9,7 +9,7 @@ ls
 # Show today's date
 date
 
-# Say hello
+# Say Hello
 echo "Hello, world!"
 
 # Wait for 2 seconds

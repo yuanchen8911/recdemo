@@ -31,7 +31,7 @@ function color() {
 
 export PLAY_PS1="$ "
 
-CACHE_DIR=${TMPDIR:-/tmp}/democtl
+CACHE_DIR=${TMPDIR:-/tmp}/recdemo
 SELFPATH="$(realpath "$0")"
 ARGS=()
 
@@ -40,7 +40,7 @@ export PATH="${CACHE_DIR}/py_modules/bin:${CACHE_DIR}/node_modules/.bin:${PATH}:
 function usage() {
   echo "Usage: ${0} <input> [output] [--help] [options...]"
   echo "  <input> input file"
-  echo "  [output] output file: .svg for a svg file (default), .cast for a cast file, .mp4 for a video file"
+  echo "  [output] output file: .svg for a svg file (default), .cast for a cast file"
   echo "  --help show this help"
   echo "  --cols=${COLS} cols of the terminal"
   echo "  --rows=${ROWS} rows of the terminal"
@@ -105,12 +105,10 @@ function command_exist() {
 
 # install_asciinema installs asciinema.
 function install_asciinema() {
-  if command_exist asciinema; then
-    return 0
-  elif command_exist pip3; then
-    pip3 install asciinema --target "${CACHE_DIR}/py_modules" >&2
+  if command_exist pip3; then
+    pip3 install asciinema
   else
-    echo "asciinema is not installed" >&2
+    echo "pip3 is not installed" >&2
     return 1
   fi
 }
@@ -172,7 +170,7 @@ function cast2svg() {
   local input="${1}"
   local output="${2}"
   local args=()
-  echo "Converting ${input} to ${output}" >&2
+  #echo "Converting ${input} to ${output}" >&2
 
   if [[ "${TERM}" != "" ]]; then
     args+=("--term" "${TERM}")
@@ -203,7 +201,7 @@ function svg2video() {
 
 # convert converts the input file to the output file.
 # The input file can be a demo, cast, or svg file.
-# The output file can be a cast, svg, or mp4 file.
+# The output file can be a cast, svg, or mp4 file (TODO).
 function convert() {
   local input="${1}"
   local output="${2}"
@@ -212,37 +210,35 @@ function convert() {
   local viedofile
 
   local outext
-  local inext
 
   outext=$(ext_file "${output}")
-  inext=$(ext_file "${input}")
   case "${outext}" in
   cast)
-      install_asciinema
-      demo2cast "${input}" "${output}"
-      return 0
-      ;;
+    install_asciinema
+    demo2cast "${input}" "${output}"
+    return 0
+    ;;
   svg)
-      install_asciinema
-      install_svg_term_cli
+    install_asciinema
+    install_svg_term_cli
 
-      castfile=$(ext_replace "${output}" "cast")
-      demo2cast "${input}" "${castfile}"
-      cast2svg "${castfile}" "${output}"
-      return 0
-      ;;
+    castfile=$(ext_replace "${output}" "cast")
+    demo2cast "${input}" "${castfile}"
+    cast2svg "${castfile}" "${output}"
+    return 0
+    ;;
   mp4)
-      install_asciinema
-      install_svg_term_cli
-      install_svg_to_video
+    install_asciinema
+    install_svg_term_cli
+    install_svg_to_video
 
-      viedofile=$(ext_replace "${output}" "svg")
-      castfile=$(ext_replace "${output}" "cast")
-      demo2cast "${input}" "${castfile}"
-      cast2svg "${castfile}" "${viedofile}"
-      svg2video "${viedofile}" "${output}"
-      return 0
-      ;;
+    viedofile=$(ext_replace "${output}" "svg")
+    castfile=$(ext_replace "${output}" "cast")
+    demo2cast "${input}" "${castfile}"
+    cast2svg "${castfile}" "${viedofile}"
+    svg2video "${viedofile}" "${output}"
+    return 0
+    ;;
   *)
     echo "Unsupported output file type: ${outext}"
     return 1
