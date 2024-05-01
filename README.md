@@ -68,9 +68,9 @@ Just open the generated svg file `simple-demo.svg`..
   <img width="800" src="examples/simple-demo.svg">
 </p>
 
-## A realistic demo 
+## A more realistic demo 
 
-Here's a realstic demo that shows how to use minikube to play with kubernetes on your Mac.
+The following demos shows how to use minikube to play with kubernetes on your Mac.
 - Input: [minikube.demo](examples/minikube.demo)
 - Output: [minikube-demo.svg](examples/minikube-demo.svg)
 
