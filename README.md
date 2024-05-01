@@ -1,7 +1,7 @@
 # Play and Record Demos in Terminal Sessions with Little Efforts
-Playing and recording demos has never been easier. This project provides a script and show how to use it for playing demos in terminal sessions and saving them to SVG files using `asciinema` and `svg-term`.
+Playing and recording demos has never been easier. This project provides a tool and demonstrates how to play demos in terminal sessions and save them as SVG files using `asciinema` and `svg-term`.
 
-## Install
+## Install (optionally)
 1. Install `asciinema` (https://asciinema.org/docs/installation)
       ```sh
       pip3 install asciinema
@@ -13,10 +13,10 @@ Playing and recording demos has never been easier. This project provides a scrip
       ```
 ## Usage
 ### Create a demo file
-A demo file is a valid script file consisting of 
-- Comment and note lines starting with `#`
-- Command lines with valid commands that will execute in the demo.
-  
+A demo file is a text file that consists of:
+- Comments and notes, each starting with '#'.
+- Command lines containing valid commands that will execute during the demo.
+
 Here's a simple example demo: [simple.demo](examples/simple.demo). 
 
 ```
@@ -78,4 +78,4 @@ Here's a realstic demo that shows how to use minikube to play with kubernetes on
 
 ## Acknowledgement
 
-The script was adapted from a script that was created by @wzshiming for the `kwok` project: https://kwok.sigs.k8s.io/.
+The script `recdemo.sh` was adapted from a script that was originally created by @wzshiming for the `kwok` project: https://kwok.sigs.k8s.io/.
