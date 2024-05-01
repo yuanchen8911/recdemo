@@ -1,7 +1,7 @@
-# Play and Record Demos in Terminal Sessions with Little Efforts
+# recdemo (record-demo): Play and Record Demos in Terminal Sessions with Little Efforts
 Playing and recording demos has never been easier. This project provides a tool and demonstrates how to play demos in terminal sessions and save them as SVG files using `asciinema` and `svg-term`.
 
-## Install asciinema and svg-term-cli
+## Install dependencies
 1. Install `asciinema` (https://asciinema.org/docs/installation)
       ```sh
       pip3 install asciinema
@@ -11,6 +11,11 @@ Playing and recording demos has never been easier. This project provides a tool 
       ```sh
       npm install -g svg-term-cli
       ```
+5. (optionall( Install `svg-to-video`
+      ```sh
+      npm install -g svg-to-video
+      ```
+        
 ## Usage
 ### Create a demo file
 A demo file is a valid script that consists of:
