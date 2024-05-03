@@ -74,13 +74,13 @@ Record a demo in a mp4 video file:
 ```
 
 ### Play a svg file
-Open the svg file `simple-demo.svg` or `simple-demo.mp4` that was generated in the previous step.
+Open the svg file `simple-demo.svg` that was generated in the previous step.
 
 <p align="center">
   <img width="800" src="examples/simple-demo.svg">
 </p>
 
-<a href="examples/simple-demo.mp4" download>the mp4 video file</a>
+Download <a href="examples/simple-demo.mp4" download="simple-demo.mp4">the mp4 video file</a>
 
 ## A more realistic demo 
 Here is a recorded demo about how to use minikube to play with kubernetes on my Mac.
