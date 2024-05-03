@@ -1,6 +1,6 @@
 # Play and Record Demos with Ease
 
-Playing and recording demos in terminal sessions has never been easier. Simply put your demo's commands with comments in a text file, then run the provided script. Your demo will run and be captured in a file in SVG or MP4 format.
+Playing and recording demos in terminal sessions has never been easier. Simply put your demo's commands with comments in a text file, then run the provided script. Your demo will run and be captured in a file in svg or mp4 format.
 
 ## Install dependencies manually (optional)
 You can skip this step if you have `pip3` and `node.js/npm` installed on your machine. In this case, the script will automatically install the required tools and modules: `asciinema`, `svg-term` and `svg-to-video` for you.
