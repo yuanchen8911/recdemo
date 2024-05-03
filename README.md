@@ -67,7 +67,6 @@ Record a demo in a svg file:
  ```sh
    ./scripts/recdemo.sh examples/simple.demo examples/simple-demo.svg
 ```
-or 
 
 Record a demo in a mp4 video file:
  ```sh
