@@ -17,7 +17,7 @@ You can skip this step if you have `pip3` and `node.js/npm` installed on your ma
       ```sh
       npm install -g svg-to-video
      ``` 
-5. Install `ffmpeg` if you need to record demos in mp4 video files (https://ffmpeg.org/download.html). 
+5. Install `ffmpeg` if you need to record demos in mp4 video files (https://ffmpeg.org/download.html) 
 
 ## Usage
 ### Create a demo file
@@ -72,16 +72,14 @@ or
    ./scripts/recdemo.sh examples/simple.demo examples/simple-demo.mp4
 ```
 
-### Play a genereated svg or mp4 file
+### Play a genereated svg file
 Open the svg file `simple-demo.svg` or `simple-demo.mp4` that was generated in the previous step.
 
 <p align="center">
   <img width="800" src="examples/simple-demo.svg">
 </p>
 
-<p align="center">
-  <img width="800" src="examples/simple-demo.mp4">
-</p>
+Download the generated [mp4 video file](examples/simple-demo.mp4">
 
 ## A more realistic demo 
 
