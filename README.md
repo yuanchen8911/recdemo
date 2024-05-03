@@ -98,4 +98,4 @@ Contributions are welcome!
 
 ## Acknowledgement
 
-The script `recdemo.sh` has been adapted from a script that was created by @wzshiming for the `kwok` project: https://kwok.sigs.k8s.io/.
+The script `recdemo.sh` has been borrowed and adapted from a script created by @wzshiming for the [kwok project](https://kwok.sigs.k8s.io/).
