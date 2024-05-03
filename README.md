@@ -80,7 +80,7 @@ Open the svg file `simple-demo.svg` or `simple-demo.mp4` that was generated in t
   <img width="800" src="examples/simple-demo.svg">
 </p>
 
-Download the recorded [mp4 video file](examples/simple-demo.mp4)
+<a href="examples/simple-demo.mp4" download>the mp4 video file</a>
 
 ## A more realistic demo 
 Here is a recorded demo about how to use minikube to play with kubernetes on my Mac.
