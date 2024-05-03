@@ -20,8 +20,8 @@ set -o pipefail
 SIMULATE=false
 COLS=86
 ROWS=24
-TERM=""
-PROFILE=""
+SVG_TERM=""
+SVG_PROFILE=""
 
 function color() {
   local color="${1}"
@@ -35,7 +35,8 @@ CACHE_DIR=${TMPDIR:-/tmp}/recdemo
 SELFPATH="$(realpath "$0")"
 ARGS=()
 
-export PATH="${CACHE_DIR}/py_modules/bin:${CACHE_DIR}/node_modules/.bin:${PATH}:${PATH}"
+export PYTHONPATH="${CACHE_DIR}/py_modules"
+export PATH="${PYTHONPATH}/bin:${CACHE_DIR}/node_modules/.bin:${PATH}:${PATH}"
 
 function usage() {
   echo "Usage: ${0} <input> [output] [--help] [options...]"
@@ -45,8 +46,8 @@ function usage() {
   echo "  --cols=${COLS} cols of the terminal"
   echo "  --rows=${ROWS} rows of the terminal"
   echo "  --ps1=${PLAY_PS1} ps1 of the recording"
-  echo "  --term=${TERM} terminal type"
-  echo "  --profile=${PROFILE} terminal profile"
+  echo "  --term=${SVG_TERM} terminal type"
+  echo "  --profile=${SVG_PROFILE} terminal profile"
 }
 
 # args parses the arguments.
@@ -73,11 +74,11 @@ function args() {
       shift
       ;;
     --term | --term=*)
-      [[ "${arg#*=}" != "${arg}" ]] && TERM="${arg#*=}" || { TERM="${2}" && shift; } || :
+      [[ "${arg#*=}" != "${arg}" ]] && SVG_TERM="${arg#*=}" || { SVG_TERM="${2}" && shift; } || :
       shift
       ;;
     --profile | --profile=*)
-      [[ "${arg#*=}" != "${arg}" ]] && PROFILE="${arg#*=}" || { PROFILE="${2}" && shift; } || :
+      [[ "${arg#*=}" != "${arg}" ]] && SVG_PROFILE="${arg#*=}" || { SVG_PROFILE="${2}" && shift; } || :
       shift
       ;;
     --help)
@@ -105,8 +106,10 @@ function command_exist() {
 
 # install_asciinema installs asciinema.
 function install_asciinema() {
-  if command_exist pip3; then
-    pip3 install asciinema
+  if command_exist asciinema; then
+    return 0
+  elif command_exist pip3; then
+    pip3 install asciinema --target "${PYTHONPATH}" >&2
   else
     echo "pip3 is not installed" >&2
     return 1
@@ -162,7 +165,7 @@ function demo2cast() {
     --cols "${COLS}" \
     --rows "${ROWS}" \
     --env "" \
-    --command "${SELFPATH} ${input} --internal-simulate --ps1='${PLAY_PS1}'"
+    --command "bash ${SELFPATH} ${input} --internal-simulate --ps1='${PLAY_PS1}'"
 }
 
 # cast2svg converts the input cast file to the output svg file.
@@ -170,14 +173,14 @@ function cast2svg() {
   local input="${1}"
   local output="${2}"
   local args=()
-  #echo "Converting ${input} to ${output}" >&2
+  echo "Converting ${input} to ${output}" >&2
 
-  if [[ "${TERM}" != "" ]]; then
-    args+=("--term" "${TERM}")
+  if [[ "${SVG_TERM}" != "" ]]; then
+    args+=("--term" "${SVG_TERM}")
   fi
 
-  if [[ "${PROFILE}" != "" ]]; then
-    args+=("--profile" "${PROFILE}")
+  if [[ "${SVG_PROFILE}" != "" ]]; then
+    args+=("--profile" "${SVG_PROFILE}")
   fi
   svg-term \
     --in "${input}" \
