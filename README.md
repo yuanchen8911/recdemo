@@ -51,7 +51,6 @@ sleep 2
 
 clear
 ```
-
 ### Play a demo and save it in a svg or mp4 file
  ```
   scripts/recdemo.sh <input> [output] [--help] [options...]
@@ -63,26 +62,28 @@ clear
   --ps1 ps1 of the recording
   --term terminal type
 ```
+
+Record a demo in a svg file:
  ```sh
    ./scripts/recdemo.sh examples/simple.demo examples/simple-demo.svg
 ```
 or 
 
+Record a demo in a mp4 video file:
  ```sh
    ./scripts/recdemo.sh examples/simple.demo examples/simple-demo.mp4
 ```
 
-### Play a genereated svg file
+### Play a svg file
 Open the svg file `simple-demo.svg` or `simple-demo.mp4` that was generated in the previous step.
 
 <p align="center">
   <img width="800" src="examples/simple-demo.svg">
 </p>
 
-Download the generated [mp4 video file](examples/simple-demo.mp4">
+Download the recorded [mp4 video file](examples/simple-demo.mp4)
 
 ## A more realistic demo 
-
 Here is a recorded demo about how to use minikube to play with kubernetes on my Mac.
 - Input: [minikube.demo](examples/minikube.demo)
 - Output: [minikube-demo.svg](examples/minikube-demo.svg)
@@ -90,9 +91,6 @@ Here is a recorded demo about how to use minikube to play with kubernetes on my 
 <p align="center">
   <img width="800" src="examples/minikube-demo.svg">
 </p>
-
-## TO DO
-Add the support for recording a demo in a video file by converting svg to mp4. 
 
 ## Contributions
 
