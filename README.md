@@ -80,7 +80,7 @@ Open the svg file `simple-demo.svg` that was generated in the previous step.
   <img width="800" src="examples/simple-demo.svg">
 </p>
 
-Download <a href="examples/simple-demo.mp4" download="simple-demo.mp4">the mp4 video file</a>
+Download [the mp4 video file](https://github.com/yuanchen8911/recdemo/blob/main/examples/simple-demo.mp4)
 
 ## A more realistic demo 
 Here is a recorded demo about how to use minikube to play with kubernetes on my Mac.
