@@ -41,7 +41,7 @@ export PATH="${PYTHONPATH}/bin:${CACHE_DIR}/node_modules/.bin:${PATH}:${PATH}"
 function usage() {
   echo "Usage: ${0} <input> [output] [--help] [options...]"
   echo "  <input> input file"
-  echo "  [output] output file: .svg for a svg file (default), .cast for a cast file"
+  echo "  [output] output file: .svg to record in a svg file (default), .cast for a cast file, .mp4 for a vidoe file"
   echo "  --help show this help"
   echo "  --cols=${COLS} cols of the terminal"
   echo "  --rows=${ROWS} rows of the terminal"

@@ -1,8 +1,8 @@
 # Play and Record Demos with Ease
-Playing and recording demos in terminal sessions has never been easier. This repository offers a guide and a tool for playing a terminal demo and recording it as SVG files using `asciinema` and `svg-term`.
+Playing and recording demos in terminal sessions has never been easier. This repository offers a guide and a tool for playing a terminal demo and recording it as SVG or mp4 vidoefiles using `asciinema`, `svg-term` and `svg-to-video`.
 
-## Install dependencies manually 
-You can skip this step if you have `pip3` and `node.js/npm` installed on your machine. In this case, the script will automatically install `asciinema` and `svg-term` for you.
+## Install dependencies manually (optional)
+You can skip this step if you have `pip3` and `node.js/npm` installed on your machine. In this case, the script will automatically install `asciinema`, `svg-term` and `svg-to-video`for you.
 
 1. Install `asciinema` (https://asciinema.org/docs/installation)
       ```sh
@@ -13,6 +13,12 @@ You can skip this step if you have `pip3` and `node.js/npm` installed on your ma
       ```sh
       npm install -g svg-term-cli
       ```
+4. Install `svg-to-video` 
+      ```sh
+      npm install -g svg-to-video
+     ``` 
+5. Install `ffmpeg` if you need to record demos in mp4 video files (https://ffmpeg.org/download.html). 
+
 ## Usage
 ### Create a demo file
 A demo file is a valid script that consists of:
@@ -46,11 +52,11 @@ sleep 2
 clear
 ```
 
-### Play a demo and save it in a svg file
+### Play a demo and save it in a svg or mp4 file
  ```
   scripts/recdemo.sh <input> [output] [--help] [options...]
   <input> input file
-  [output] output file: .svg for a svg file (default), .cast for a cast file
+  [output] output file: .svg to record in a svg file (default), .cast in a cast file, .mp4 in a video file
   --help show this help
   --cols cols of the terminal
   --rows rows of the terminal
@@ -60,12 +66,21 @@ clear
  ```sh
    ./scripts/recdemo.sh examples/simple.demo examples/simple-demo.svg
 ```
+or 
 
-### Play a genereated svg file
-Open the svg file `simple-demo.svg` generated in the previous step.
+ ```sh
+   ./scripts/recdemo.sh examples/simple.demo examples/simple-demo.mp4
+```
+
+### Play a genereated svg or mp4 file
+Open the svg file `simple-demo.svg` or `simple-demo.mp4` that was generated in the previous step.
 
 <p align="center">
   <img width="800" src="examples/simple-demo.svg">
+</p>
+
+<p align="center">
+  <img width="800" src="examples/simple-demo.mp4">
 </p>
 
 ## A more realistic demo 
